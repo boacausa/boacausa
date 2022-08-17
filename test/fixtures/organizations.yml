@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  phone_number1: MyString
+  phone_number2: MyString
+  email: MyString
+  website: MyString
+  registration: MyString
+  date_start: 2022-08-17 19:34:14
+  description: MyText
+  active: false
+  transparency_doc: MyString
+  deposit_description: MyText
+  zipcode: MyString
+  address: MyString
+  address_2: MyString
+  city: MyString
+  state: MyString
+
+two:
+  name: MyString
+  phone_number1: MyString
+  phone_number2: MyString
+  email: MyString
+  website: MyString
+  registration: MyString
+  date_start: 2022-08-17 19:34:14
+  description: MyText
+  active: false
+  transparency_doc: MyString
+  deposit_description: MyText
+  zipcode: MyString
+  address: MyString
+  address_2: MyString
+  city: MyString
+  state: MyString
