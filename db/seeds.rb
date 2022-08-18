@@ -33,7 +33,7 @@ Organization.destroy_all
     deposit_description: "TODO",
   )
 
-  # Organization.last.image.attach(io: File.open("public/images/ngo/amigobicho.png"), filename: "amigobicho.png")
+  Organization.last.image.attach(io: File.open("public/images/organization/amigobicho.png"), filename: "amigobicho.png")
 end
 
 # puts "Creating Users"
