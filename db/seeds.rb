@@ -1,4 +1,3 @@
-
 puts "Deleting old data"
 
 # AdoptionInterestNotification.destroy_all
@@ -30,7 +29,7 @@ Organization.destroy_all
     address1: Faker::Address.street_address,
     address2: Faker::Address.building_number,
     description: Faker::Lorem.paragraph,
-    deposit_description: "TODO",
+    deposit_description: "TODO"
   )
 
   Organization.last.image.attach(io: File.open("public/images/organization/amigobicho.png"), filename: "amigobicho.png")
