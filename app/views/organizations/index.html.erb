@@ -12,6 +12,8 @@
   </div>
 
   <div id="organizations" class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-24 mb-24">
-    <%= render @organizations %>
+    <% @organizations.each do |organization| %>
+      <%= render "organization_card", organization: organization %>
+    <% end %>
   </div>
 </div>

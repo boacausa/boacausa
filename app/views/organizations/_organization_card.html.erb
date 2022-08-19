@@ -1,0 +1,18 @@
+<a href="<%= organization_path(organization.id) %>" id="<%= dom_id organization %>" class="shadow-md p-4">
+  <%= image_tag organization.image %>
+
+  <p class="my-5 text-center text-lg font-medium">
+    <%= organization.name %>
+  </p>
+
+  <p class="my-5 text-center text-lg">
+    <%= organization.description %>
+  </p>
+
+  <%# hidden for now %>
+  <% if false && action_name != "show" %>
+    <%= link_to "Show this organization", organization, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this organization', edit_organization_path(organization), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</a>
