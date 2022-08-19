@@ -3,12 +3,15 @@
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
 
-  <div class="flex justify-between items-center">
+  <h1 class="text-2xl text-center"><%= t("page_title") %></h1>
+  <h2 class="text-lg text-center"><%= t("page_subtitle") %></h2>
+
+  <div class="hidden flex justify-between items-center">
     <h1 class="font-bold text-4xl">Organizations</h1>
     <%= link_to 'New organization', new_organization_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
 
-  <div id="organizations" class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+  <div id="organizations" class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     <%= render @organizations %>
   </div>
 </div>
