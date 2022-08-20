@@ -1,18 +1,76 @@
-<div id="<%= dom_id organization %>" class="shadow-md p-4">
-  <%= image_tag organization.image %>
+<div class="columns-1 lg:columns-2 gap-8">
+  <div class="w-full">
+    <%= image_tag organization.image %>
+    <h1 class="text-2xl"><%= t("donation_instructions.title") %></h1>
+    <p>TODO: Bank information and other payment methods</p>
+  </div>
 
-  <p class="my-5 text-center text-lg font-medium">
-    <%= organization.name %>
-  </p>
-
-  <p class="my-5 text-center text-lg">
-    <%= organization.description %>
-  </p>
-
-  <%# hidden for now %>
-  <% if false && action_name != "show" %>
-    <%= link_to "Show this organization", organization, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this organization', edit_organization_path(organization), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
-  <% end %>
+  <div class="w-full">
+    <p class="my-5 text-center text-lg font-medium">
+      <%= organization.name %>
+    </p>
+    <p class="my-5 text-center text-lg">
+      <%= organization.description %>
+    </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Phone number1:</strong>
+      <%= organization.phone_number1 %>
+    </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Phone number2:</strong>
+      <%= organization.phone_number2 %>
+    </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Email:</strong>
+      <%= organization.email %>
+    </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Website:</strong>
+      <%= organization.website %>
+    </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Registration:</strong>
+      <%= organization.registration %>
+    </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Date start:</strong>
+      <%= organization.date_start %>
+    </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Description:</strong>
+      <%= organization.description %>
+    </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Active:</strong>
+      <%= organization.active %>
+    </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Transparency doc:</strong>
+      <%= organization.transparency_doc %>
+    </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Deposit description:</strong>
+      <%= organization.deposit_description %>
+    </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Zipcode:</strong>
+      <%= organization.zipcode %>
+    </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Address:</strong>
+      <%= organization.address1 %>
+    </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Address 2:</strong>
+      <%= organization.address2 %>
+    </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">City:</strong>
+      <%= organization.city %>
+    </p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">State:</strong>
+      <%= organization.state %>
+    </p>
+  </div>
 </div>
