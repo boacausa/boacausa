@@ -2,13 +2,13 @@ puts "Deleting old data"
 
 # AdoptionInterestNotification.destroy_all
 # AdoptionInterest.destroy_all
-# Pet.destroy_all
+Pet.destroy_all
 Organization.destroy_all
 # User.destroy_all
 
 # puts "Creating NGOs"
 
-10.times do |i|
+8.times do |i|
   org_name = "#{i} NGO"
 
   puts "Creating organization #{org_name}"
@@ -65,22 +65,25 @@ end
 
 # ngo_user.ngos << Ngo.first
 
-# puts "Creating Pets"
+puts "Creating Pets"
 
-# ngo_ids = Ngo.all.pluck(:id)
-# 7.times do
-#   pet = Pet.create!(
-#     name: Faker::Name.first_name,
-#     age: Random.rand(10),
-#     description: Faker::Lorem.paragraph_by_chars(number: [100, 50, 200, 300, 500].sample),
-#     sex: ["f", "m"].sample,
-#     active: true,
-#     ngo_id: ngo_ids.sample
-#   )
+organization_ids = Organization.all.pluck(:id)
+20.times do
+  pet_name = Faker::Name.first_name
+
+  puts "Creating pet #{pet_name}"
+
+  Pet.create!(
+    name: pet_name,
+    age: "#{Random.rand(10)} #{["years", "months"].sample} old",
+    description: Faker::Lorem.paragraph_by_chars(number: [100, 50, 200, 300, 500].sample),
+    gender: ["f", "m"].sample,
+    status: "active",
+    organization_id: organization_ids.sample
+  )
 
 #   random_image_number = Random.rand(6)
 
 #   pet.image.attach(io: File.open("public/images/pets/#{random_image_number}.png"),
 #     filename: "#{random_image_number}.png")
-#   pet.save
-# end
+end
