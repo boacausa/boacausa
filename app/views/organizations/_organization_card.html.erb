@@ -1,5 +1,5 @@
 <a href="<%= organization_path(organization.id) %>" id="<%= dom_id organization %>" class="shadow-md p-4">
-  <%= image_tag organization.image %>
+  <%= render "organization_image", organization: organization %>
 
   <p class="my-5 text-center text-lg font-medium">
     <%= organization.name %>

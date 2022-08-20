@@ -1,6 +1,6 @@
 <div class="columns-1 lg:columns-2 gap-8">
   <div class="w-full">
-    <%= image_tag organization.image %>
+    <%= render "organization_image", organization: organization %>
     <h1 class="text-2xl"><%= t("donation_instructions.title") %></h1>
     <p>TODO: Bank information and other payment methods</p>
   </div>
