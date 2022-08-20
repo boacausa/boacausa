@@ -13,8 +13,8 @@ one:
   transparency_doc: MyString
   deposit_description: MyText
   zipcode: MyString
-  address: MyString
-  address_2: MyString
+  address1: MyString
+  address2: MyString
   city: MyString
   state: MyString
 
@@ -31,7 +31,7 @@ two:
   transparency_doc: MyString
   deposit_description: MyText
   zipcode: MyString
-  address: MyString
-  address_2: MyString
+  address1: MyString
+  address2: MyString
   city: MyString
   state: MyString
