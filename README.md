@@ -17,13 +17,24 @@ http://boacausa.org/
 
 **Requirements**
 
-* Ruby 3.0.0
+* Ruby 3.2.0
 
 **Installation**
 
+This is optional if you want to use rbenv to manage ruby versions
+
 ```shell
-rbenv install ruby 3.0.3 -- optional
-rbenv local 3.0.3 -- optional
+# Update rbenv
+cd ~/.rbenv/plugins/ruby-build/ && git pull
+# or
+brew update && brew upgrade ruby-build
+# Install latest ruby
+rbenv install 3.2.0
+```
+
+Project setup
+
+```shell
 gem install bundler
 bundler install
 rails db:setup
