@@ -32,7 +32,7 @@ Organization.destroy_all
     deposit_description: "TODO"
   )
 
-  Organization.last.image.attach(io: File.open("public/images/organization/amigobicho.png"), filename: "amigobicho.png")
+  Organization.last.image.attach(io: File.open("public/images/organizations/amigobicho.png"), filename: "amigobicho.png")
 end
 
 # puts "Creating Users"
@@ -68,12 +68,13 @@ end
 puts "Creating Pets"
 
 organization_ids = Organization.all.pluck(:id)
+
 20.times do
   pet_name = Faker::Name.first_name
 
   puts "Creating pet #{pet_name}"
 
-  Pet.create!(
+  pet = Pet.create!(
     name: pet_name,
     age: "#{Random.rand(10)} #{["years", "months"].sample} old",
     description: Faker::Lorem.paragraph_by_chars(number: [100, 50, 200, 300, 500].sample),
@@ -82,8 +83,6 @@ organization_ids = Organization.all.pluck(:id)
     organization_id: organization_ids.sample
   )
 
-#   random_image_number = Random.rand(6)
-
-#   pet.image.attach(io: File.open("public/images/pets/#{random_image_number}.png"),
-#     filename: "#{random_image_number}.png")
+  random_image_number = Random.rand(6)
+  pet.image.attach(io: File.open("public/images/pets/#{random_image_number}.png"), filename: "#{random_image_number}.png")
 end
