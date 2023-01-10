@@ -1,0 +1,22 @@
+<div id="<%= dom_id pet %>" class="shadow-md p-4">
+  <p class="my-5 text-center text-lg font-medium">
+    <%= pet.name %>
+  </p>
+  <p class="my-5">
+    <%= link_to pet.organization.name, organization_path(pet.organization_id), class: "font-medium text-blue-600 dark:text-blue-500 hover:underline" %>
+  </p>
+
+  <p class="my-5 text-md text-slate-500">
+    <%= pet.description %>
+  </p>
+
+  <div class="my-5 flex flex-row">
+    <p class="text-md">
+      <%= pet.age %>
+    </p>
+
+    <p class="ml-4 px-4 rounded-full text-white bg-purple-500">
+      <%= pet.status.capitalize %>
+    </p>
+  </div>
+</div>
