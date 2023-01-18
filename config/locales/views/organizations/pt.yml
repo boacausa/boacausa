@@ -1,5 +1,6 @@
 pt:
-  page_title: "Conheça as ONGs que lutam todos os dias por uma Boa Causa"
-  page_subtitle: "Acompanhe, aqui, suas atividades, situação financeira e faça doações"
-  donation_instructions:
-      title: "Faça uma doação agora mesmo!"
+  organizations:
+    page_title: "Conheça as ONGs que lutam todos os dias por uma Boa Causa"
+    page_subtitle: "Acompanhe, aqui, suas atividades, situação financeira e faça doações"
+    donation_instructions:
+        title: "Faça uma doação agora mesmo!"

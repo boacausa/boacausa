@@ -1,5 +1,6 @@
 en:
-  page_title: "Get to know the NGOs that are fighting for a Good Cause"
-  page_subtitle: "Follow their activities, finacial situation and make donations"
-  donation_instructions:
-    title: "Make a donation"
+  organizations:
+    page_title: "Get to know the NGOs that are fighting for a Good Cause"
+    page_subtitle: "Follow their activities, finacial situation and make donations"
+    donation_instructions:
+      title: "Make a donation"
