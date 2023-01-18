@@ -4,9 +4,9 @@ puts "Deleting old data"
 # AdoptionInterest.destroy_all
 Pet.destroy_all
 Organization.destroy_all
-# User.destroy_all
+User.destroy_all
 
-# puts "Creating NGOs"
+puts "####### Creating organizations"
 
 8.times do |i|
   org_name = "#{i} NGO"
@@ -35,16 +35,43 @@ Organization.destroy_all
   Organization.last.image.attach(io: File.open("public/images/organizations/amigobicho.png"), filename: "amigobicho.png")
 end
 
-# puts "Creating Users"
+puts "####### Creating users"
 
-# User.create!(
-#   name: "User admin",
-#   last_name: "Sobrenome",
-#   email: "admin@boacausa.com",
-#   cpf: "22201745064",
-#   password: "123456789",
-#   group: :admin,
-# )
+User.create!(
+  name: "Regular User",
+  email: "user@boacausa.com",
+  password: "123456789",
+  role: :user,
+)
+
+puts "Creating user Regular"
+
+User.create!(
+  name: "Organization Volunteer User",
+  email: "volunteer@boacausa.com",
+  password: "123456789",
+  role: :volunteer,
+)
+
+puts "Creating user Volunteer"
+
+User.create!(
+  name: "Organization Manager User",
+  email: "manager@boacausa.com",
+  password: "123456789",
+  role: :manager,
+)
+
+puts "Creating user Manager"
+
+User.create!(
+  name: "Admin User",
+  email: "admin@boacausa.com",
+  password: "123456789",
+  role: :admin,
+)
+
+puts "Creating user Admin"
 
 # ngo_user = User.create!(
 #   name: "User da ONG",
@@ -55,17 +82,9 @@ end
 #   group: :ngo
 # )
 
-# User.create!(
-#   name: "User normal",
-#   last_name: "Sobrenome",
-#   email: "user@boacausa.com",
-#   cpf: "07750110020",
-#   password: "123456789",
-# )
-
 # ngo_user.ngos << Ngo.first
 
-puts "Creating Pets"
+puts "####### Creating pets"
 
 organization_ids = Organization.all.pluck(:id)
 
